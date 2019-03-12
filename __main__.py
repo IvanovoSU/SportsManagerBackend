@@ -38,6 +38,6 @@ def root():
     if request.method == 'POST':
         # code here         
         db.session.commit() 
-    return "Ok"
+    return generate_page(open('include/index.html', 'r').read())
 
 app.run()
