@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>{% block title %} {% endblock %}</title>
+  {%load staticfiles %}
+  {% block head %}
+  {% endblock %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+ <body>
+  {% block content %}
+  {% endblock %}
+ </body>
+</html>
