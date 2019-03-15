@@ -1,8 +1,56 @@
 {% extends "mainPattern/wrapper.html" %}
 
 
-{% block title %}Домашняя страница{% endblock %}
-
+{% block title %}Главная страница{% endblock %}
+{%load staticfiles %}
+{%block head %}
+<link rel="stylesheet" href="{% static 'css/home-style.css' %}" type="text/css">
+{% endblock %}
 {% block content %}
+  <div class="wrapper fadeInDown">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+            <div class="row sportsmen">
+              Спортсмены %count%
+            </div>
+            <div class="row search">
+              <input type="search" name="search" placeholder="Начните вводить любое имя"/>
+            </div>
+            <div class="row sportsman">
 
+            </div>
+        </div>
+        <div class="col-md-3 options">
+          <div class="row">
+            <p>Дата рождения</p>
+          </div>
+          <div class="row">
+            <select name="year">
+              <option value="year-none">Год рождения</option>
+              {% for i in years reversed %}
+                <option value="{{i}}">{{i}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="row">
+            <select name="month">
+              <option value="month-none">Месяц рождения</option>
+              {% for i in months %}
+                <option value="{{i}}">{{i}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="row">
+            <select name="day">
+              <option value="day-none">День рождения</option>
+              {% for i in days %}
+                <option value="{{i}}">{{i}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

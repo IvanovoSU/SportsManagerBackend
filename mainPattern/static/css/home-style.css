@@ -1,0 +1,105 @@
+html, body{
+    padding:0;
+    margin:0;
+    background-color: #F1F1F6;
+}
+
+.wrapper{
+  position: absolute;
+  width: 50%;
+  min-height: 90vh;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+  left:30%; margin-left:-150px;
+  top: 10%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+}
+
+.sportsmen{
+  width: auto;
+  background-color: #FAFBFC;
+  padding: 2%;
+  border-bottom: 1px solid #E7E8EC;
+  border-radius: 15px 0 0 0;
+}
+
+.search{
+  border-bottom: 1px solid #E7E8EC;
+  width: auto;
+}
+
+.search input[type="search"]{
+  background: url("../image/search.svg") 100% 100% no-repeat;
+  background-size: 4%;
+  width: 100%;
+  border: none;
+  padding: 1%;
+  padding-left: 6%;
+  background-position: 4px;
+  outline: none;
+}
+
+.options{
+  border-radius: 0 15px 0 0;
+  border-bottom: 1px solid #E7E8EC;
+  border-left: 1px solid #E7E8EC;
+  padding-left: 20px;
+}
+.options p{
+  margin: 0 auto 0 auto;
+  font-size: 18px;
+}
+
+.options select{
+  width: 100%;
+  padding: 1%;
+  border-radius: 2px;
+  border: 1px solid #D3D9DE;
+  font-size: 16px;
+  background-image: url('../image/down-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.options .row{
+  padding: 5% 10% 5% 10%;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
