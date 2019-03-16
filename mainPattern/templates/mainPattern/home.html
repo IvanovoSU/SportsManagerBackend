@@ -6,10 +6,16 @@
 {%block head %}
 <link rel="stylesheet" href="{% static 'css/home-style.css' %}" type="text/css">
 {% endblock %}
+
+{% block header %}
+{% include 'mainPattern/includes/header.html' %}
+{% endblock %}
+
 {% block content %}
   <div class="wrapper fadeInDown">
     <div class="container-fluid">
       <div class="row">
+
         <div class="col-md-9">
             <div class="row sportsmen">
               Спортсмены %count%
@@ -18,9 +24,26 @@
               <input type="search" name="search" placeholder="Начните вводить любое имя"/>
             </div>
             <div class="row sportsman">
-
+              <div class="col-md-2">
+                <p>01.12.2004</p>
+              </div>
+              <div class="col-md-10">
+                <p>Владимир Владимирович Путин</p>
+                <div class="info-block">
+                  Дополнительная информация
+                  </div>
+              </div>
+            </div>
+            <div class="row sportsman">
+              <div class="col-md-2">
+                <p>01.12.2005</p>
+              </div>
+              <div class="col-md-10">
+                <p>Дмитрий Анатольевич Медведев</p>
+              </div>
             </div>
         </div>
+
         <div class="col-md-3 options">
           <div class="row">
             <p>Дата рождения</p>
@@ -53,4 +76,8 @@
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block footer %}
+{% include 'mainPattern/includes/footer.html' %}
 {% endblock %}
